@@ -1,0 +1,9 @@
+# Runtime dependencies
+# Recommended Python: 3.12 or 3.13
+streamlit>=1.40,<2.0
+plotly>=5.20,<7.0
+numpy>=1.26,<3.0
+scipy>=1.11.4,<2.0
+pandas>=2.1.1,<3.0
+orjson>=3.10,<4.0
+pydma>=1.1.1,<2.0

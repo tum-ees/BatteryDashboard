@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this software in scientific work, please cite the repository using these metadata."
+title: "Battery Health Dashboard"
+type: software
+authors:
+  - name: "Chair of Electrical Energy Storage Technology, Technical University of Munich"
+abstract: >-
+  Battery health monitoring and lifetime prediction dashboard developed in the
+  context of the HealthBatt research project. The software combines an
+  operational traffic-light monitoring system with analysis of capacity and
+  resistance trends, GEIS/DRT measurements, degradation mode analysis and
+  battery lifetime prediction.
+license: BSD-3-Clause
+keywords:
+  - battery health
+  - battery monitoring
+  - state of health
+  - lifetime prediction
+  - electrochemical impedance spectroscopy
+  - distribution of relaxation times
+  - degradation mode analysis
+  - HealthBatt

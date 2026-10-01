@@ -1,0 +1,38 @@
+{
+  "humidity": {
+    "green_max_pct": 85.0,
+    "yellow_max_pct": 95.0
+  },
+  "acceleration": {
+    "green_max_g": 100.0,
+    "yellow_max_g": 120.0,
+    "yellow_event_limit": 10,
+    "rearm_hysteresis_s": 1.0
+  },
+  "voltage": {
+    "red_low_below_v": 14.0,
+    "green_low_v": 21.0,
+    "green_high_v": 29.05,
+    "red_high_above_v": 29.4
+  },
+  "current": {
+    "green_abs_max_a": 65.0,
+    "yellow_abs_max_a": 86.0
+  },
+  "temperature": {
+    "current_deadband_a": 0.5,
+    "rest_fallback_mode": "discharge",
+    "charge": {
+      "red_low_below_c": -6.0,
+      "green_low_c": 0.0,
+      "green_high_c": 50.0,
+      "red_high_above_c": 56.0
+    },
+    "discharge": {
+      "red_low_below_c": -25.0,
+      "green_low_c": -20.0,
+      "green_high_c": 55.0,
+      "red_high_above_c": 61.0
+    }
+  }
+}

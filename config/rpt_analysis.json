@@ -1,0 +1,78 @@
+{
+  "cu": {
+    "capacity_discharge_label": "CC_DIS",
+    "capacity_current_deadband_a": 0.05,
+    "reference_pulse_label": "PULSE_DIS_MEDIUM_START_50",
+    "pulse_resistance_delay_s": 10.0,
+    "pulse_delay_tolerance_s": 0.75,
+    "pulse_delta_i_min_a": 0.5,
+    "pulse_pre_window_s": 5.0,
+    "min_pulse_duration_s": 9.0,
+    "capacity_metadata_keys": [
+      "Capacity_CCCV_Ah",
+      "Capacity_Ah"
+    ],
+    "metadata_resistance_soc": "SoC50",
+    "metadata_resistance_c_rate": "0.5C",
+    "metadata_resistance_mode": "mean",
+    "metadata_resistance_delay": "10s"
+  },
+  "geis": {
+    "min_points": 20,
+    "drt_points": 120,
+    "lambda_mode": "auto_lcurve",
+    "drt_lambda": 0.001,
+    "lambda_min": 1e-08,
+    "lambda_max": 100.0,
+    "lambda_candidates": 17,
+    "tau_min_factor": 0.5,
+    "tau_max_factor": 2.0,
+    "inductance_fit_points": 8,
+    "peak_prominence_fraction": 0.05
+  },
+  "regression": {
+    "forecast_fraction": 0.3,
+    "min_forecast_span": 100.0,
+    "n_forecast": 50
+  },
+  "dma": {
+    "direction": "charge",
+    "anode_ocp_path": "resources/halfcell/anodeOCP.mat",
+    "cathode_ocp_path": "resources/halfcell/cathodeOCP.mat",
+    "min_pocv_points": 20,
+    "speed_preset": "fast",
+    "max_tries_overall": 3,
+    "weight_ocv": 100,
+    "weight_dva": 100,
+    "weight_ica": 0,
+    "roi_ocv_min": 0.0,                  
+    "roi_ocv_max": 1.0,                  
+    "roi_dva_min": 0.10,                 
+    "roi_dva_max": 0.95,
+    "allow_first_cycle_inhomogeneity": false,                
+    "allow_anode_inhomogeneity": true,
+    "max_inhomogeneity": 0.1,
+    "max_inhomogeneity_delta": 0.02,
+    "inhom_anode_offset": 0.0
+  },
+  "prediction": {
+    "method": "fischer_2025_powerlaw",
+    "soc": "SoC50",
+    "c_rate": "1C",
+    "mode": "mean",
+    "delay": "10s",
+    "min_rpts": 5,
+    "min_capacity_fade_fraction": 0.03,
+    "require_min_capacity_fade": true,
+    "hampel_threshold": 2.0,
+    "hampel_half_window": 2,
+    "max_resistance_ohm": 0.5,
+    "cv_repeats": 10,
+    "cv_train_fraction": 0.7,
+    "cv_seed": 42,
+    "enable_usage_projection": true,
+    "eol_soh": 0.8,
+    "forecast_factor": 1.5,
+    "n_forecast": 120
+  }
+}
